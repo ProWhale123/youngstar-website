@@ -1,0 +1,66 @@
+---
+// src/components/Courses.astro
+import Container from './Container.astro';
+import Button from './Button.astro';
+
+// Képek importálása az Astro optimalizálásához
+import borbelyImg from '../assets/borbely-kepzes.jpg';
+import manikurImg from '../assets/manikur-kepzes.jpg';
+import rutinvarazsloImg from '../assets/rutinvarazslo-kepzes.jpg';
+---
+
+<section id="kepzesek" class="py-20 sm:py-24 bg-slate-50">
+  <Container>
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+        Legnépszerűbb Képzéseink
+      </h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Válaszd ki a hozzád leginkább illő képzést, és indítsd el karriered a szépségiparban profi, tapasztalt oktatóink segítségével.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+      
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+        <img src={borbelyImg.src} alt="Borbély képzés" class="w-full h-56 object-cover" />
+        <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900">Borbély Képzés</h3>
+          <p class="mt-2 text-slate-600 flex-grow">
+            Tanulj mester oktatóktól profin felszerelt, működő szalonunkban! Sajátítsd el a legújabb trendeket és szerezz piacképes tudást.
+          </p>
+          <div class="mt-6">
+            <Button href="/kepzesek/borbely" variant="secondary">Részletek</Button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+        <img src={manikurImg.src} alt="Manikűr és körömdizájn képzés" class="w-full h-56 object-cover" />
+        <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900">Manikűr és Körömdizájn</h3>
+          <p class="mt-2 text-slate-600 flex-grow">
+            Gyakorlatorientált képzés mesterleveles oktatóval. Ismerd meg a legmodernebb technológiákat, eszközöket és anyagokat.
+          </p>
+          <div class="mt-6">
+            <Button href="/kepzesek/manikur" variant="secondary">Részletek</Button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
+        <img src={rutinvarazsloImg.src} alt="Rutinvarázsló képzés" class="w-full h-56 object-cover" />
+        <div class="p-6 flex-grow flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900">Rutinvarázsló</h3>
+          <p class="mt-2 text-slate-600 flex-grow">
+            Ismerd meg jobban a bőröd és tanuld meg, hogyan építs fel egy tudatos, hatékony és káros összetevőktől mentes bőrápolási rutint.
+          </p>
+          <div class="mt-6">
+            <Button href="/kepzesek/rutinvarazslo" variant="secondary">Részletek</Button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </Container>
+</section>

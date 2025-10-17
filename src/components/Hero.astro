@@ -1,0 +1,47 @@
+---
+// src/components/Hero.astro
+import Container from './Container.astro';
+import Button from './Button.astro';
+
+// EZ ÚJ: Importáljuk a képet, hogy az Astro optimalizálni tudja.
+import heroImage from '../assets/hero-kep.jpg'; 
+---
+
+<section class="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+  {/* A háttér effektet kicsit eltoljuk, hogy jobban mutasson a kép mögött */}
+  <div class="absolute inset-x-0 top-0 -z-10 transform-gpu overflow-hidden blur-3xl">
+    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+4rem)] sm:w-[72.1875rem]"></div>
+  </div>
+
+  <Container>
+    {/* EZ VÁLTOZOTT: A text-center helyett egy kétoszlopos rácsot (grid) használunk */}
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <div class="text-center sm:text-left">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+          Ne csak álmodozz róla. <span class="text-sky-600">Valósítsd meg nálunk!</span>
+        </h1>
+        <p class="mt-6 text-lg text-slate-600">
+          Borbély, manikűrös, szépségtanácsadó és egyéb népszerű szépségszakmai képzések, ahol a jövőd elkezdődik.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-4">
+          <Button href="/kepzesek" variant="primary">
+            Összes képzésünk
+          </Button>
+          <Button href="/kapcsolat" variant="secondary">
+            Vedd fel a kapcsolatot
+          </Button>
+        </div>
+      </div>
+
+      <div class="hidden lg:block">
+        <img 
+          src={heroImage.src} 
+          alt="YoungStar Academy oktatóközpont"
+          class="rounded-xl shadow-2xl w-full h-auto object-cover"
+        />
+      </div>
+
+    </div>
+  </Container>
+</section>

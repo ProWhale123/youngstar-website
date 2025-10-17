@@ -1,0 +1,21 @@
+---
+// src/components/Button.astro
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const { href, variant = 'primary' } = Astro.props;
+
+const styles = {
+  base: "inline-block px-6 py-3 rounded-lg text-center font-bold text-sm uppercase tracking-wider transition-transform duration-200 ease-in-out transform hover:-translate-y-0.5",
+  primary: "bg-orange-500 text-white shadow-lg hover:bg-orange-600",
+  secondary: "bg-transparent text-sky-600 border-2 border-sky-600 hover:bg-sky-600 hover:text-white"
+}
+
+const buttonClass = `${styles.base} ${styles[variant]}`;
+---
+
+<a href={href} class={buttonClass}>
+  <slot />
+</a>

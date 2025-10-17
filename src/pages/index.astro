@@ -1,16 +1,13 @@
 ---
-
+// src/pages/index.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import WhyUs from '../components/WhyUs.astro';
+import Courses from '../components/Courses.astro'; // <-- Új import
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Főoldal - Borbély és szépségszakmai képzések">
+  <Hero />
+    <Courses /> {/* <-- Új komponens beillesztve */}
+  <WhyUs />
+</MainLayout>
