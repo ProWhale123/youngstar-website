@@ -1,16 +1,18 @@
 ---
 // src/components/Footer.astro
+import { Image } from 'astro:assets';
+import logoWhite from '../assets/logo.jpg'; 
 import Container from './Container.astro';
 
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-slate-800 text-slate-300 py-12">
+<footer id="kapcsolat" class="bg-slate-800 text-slate-300 py-12">
   <Container>
     <div class="grid md:grid-cols-3 gap-8">
       <div>
-        <h3 class="text-xl font-bold text-white">YoungStar Academy</h3>
-        <p class="mt-2 text-slate-400">Oktató és szolgáltató központ</p>
+        <Image src={logoWhite} alt="YoungStar Academy Logo" class="h-14 w-auto" />
+        <p class="mt-4 text-slate-400">Oktató és szolgáltató központ</p>
       </div>
       
       <div>
@@ -28,7 +30,7 @@ const currentYear = new Date().getFullYear();
           <li><a href="/kepzesek/borbely" class="hover:text-white">Borbély képzés</a></li>
           <li><a href="/kepzesek/manikur" class="hover:text-white">Manikűr képzés</a></li>
           <li><a href="/kepzesek/szepsegtanacsado" class="hover:text-white">Szépségtanácsadó</a></li>
-          <li><a href="/kepzesek" class="hover:text-white">További képzések...</a></li>
+          <li><a href="#kepzesek" class="hover:text-white">További képzések...</a></li>
         </ul>
       </div>
     </div>

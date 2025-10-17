@@ -1,12 +1,13 @@
 ---
 // src/components/Oktatoink.astro
+import { Image } from 'astro:assets';
 import Container from './Container.astro';
-import oktato1 from '../assets/oktato-1.jpg'; // Cseréld le a valós fájlnevekre!
+import oktato1 from '../assets/oktato-1.jpg';
 import oktato2 from '../assets/oktato-2.jpg';
-import oktato3 from '../assets/oktato-3.jpg'; // Hozzáadhatsz/törölhetsz oktatókat
+import oktato3 from '../assets/oktato-3.jpg';
 ---
 
-<section class="py-20 sm:py-24 bg-white">
+<section id="oktatoink" class="py-20 sm:py-24 bg-white">
   <Container>
     <div class="text-center max-w-3xl mx-auto">
       <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
@@ -18,10 +19,9 @@ import oktato3 from '../assets/oktato-3.jpg'; // Hozzáadhatsz/törölhetsz okta
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
-      <div class="text-center">
+      <div class="text-center transition-transform duration-300 hover:-translate-y-2">
         <div class="relative w-48 h-48 mx-auto">
-          <img src={oktato1.src} alt="Oktató neve" class="rounded-full object-cover w-full h-full shadow-lg" />
-          {/* Opcionális díszítő elem */}
+          <Image src={oktato1} alt="Oktató neve" class="rounded-full object-cover w-full h-full shadow-lg" />
           <div class="absolute -top-2 -right-2 w-12 h-12 bg-sky-200 rounded-full -z-10"></div>
         </div>
         <h3 class="mt-6 text-xl font-bold text-slate-900">Oktató Neve</h3>
@@ -31,9 +31,9 @@ import oktato3 from '../assets/oktato-3.jpg'; // Hozzáadhatsz/törölhetsz okta
         </p>
       </div>
 
-      <div class="text-center">
+      <div class="text-center transition-transform duration-300 hover:-translate-y-2">
         <div class="relative w-48 h-48 mx-auto">
-          <img src={oktato2.src} alt="Paranovyné Egri Zsanett" class="rounded-full object-cover w-full h-full shadow-lg" />
+          <Image src={oktato2} alt="Paranovyné Egri Zsanett" class="rounded-full object-cover w-full h-full shadow-lg" />
           <div class="absolute -bottom-2 -left-2 w-12 h-12 bg-orange-200 rounded-full -z-10"></div>
         </div>
         <h3 class="mt-6 text-xl font-bold text-slate-900">Paranovyné Egri Zsanett</h3>
@@ -43,9 +43,9 @@ import oktato3 from '../assets/oktato-3.jpg'; // Hozzáadhatsz/törölhetsz okta
         </p>
       </div>
 
-      <div class="text-center">
+      <div class="text-center transition-transform duration-300 hover:-translate-y-2">
         <div class="relative w-48 h-48 mx-auto">
-          <img src={oktato3.src} alt="Oktató neve" class="rounded-full object-cover w-full h-full shadow-lg" />
+          <Image src={oktato3} alt="Oktató neve" class="rounded-full object-cover w-full h-full shadow-lg" />
           <div class="absolute -top-2 -left-2 w-12 h-12 bg-pink-200 rounded-full -z-10"></div>
         </div>
         <h3 class="mt-6 text-xl font-bold text-slate-900">Harmadik Oktató</h3>

@@ -1,9 +1,8 @@
 ---
 // src/components/Courses.astro
+import { Image } from 'astro:assets';
 import Container from './Container.astro';
 import Button from './Button.astro';
-
-// Képek importálása az Astro optimalizálásához
 import borbelyImg from '../assets/borbely-kepzes.jpg';
 import manikurImg from '../assets/manikur-kepzes.jpg';
 import rutinvarazsloImg from '../assets/rutinvarazslo-kepzes.jpg';
@@ -22,8 +21,8 @@ import rutinvarazsloImg from '../assets/rutinvarazslo-kepzes.jpg';
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
       
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-        <img src={borbelyImg.src} alt="Borbély képzés" class="w-full h-56 object-cover" />
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+        <Image src={borbelyImg} alt="Borbély képzés" class="w-full h-56 object-cover" />
         <div class="p-6 flex-grow flex flex-col">
           <h3 class="text-xl font-bold text-slate-900">Borbély Képzés</h3>
           <p class="mt-2 text-slate-600 flex-grow">
@@ -35,8 +34,8 @@ import rutinvarazsloImg from '../assets/rutinvarazslo-kepzes.jpg';
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-        <img src={manikurImg.src} alt="Manikűr és körömdizájn képzés" class="w-full h-56 object-cover" />
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+        <Image src={manikurImg} alt="Manikűr és körömdizájn képzés" class="w-full h-56 object-cover" />
         <div class="p-6 flex-grow flex flex-col">
           <h3 class="text-xl font-bold text-slate-900">Manikűr és Körömdizájn</h3>
           <p class="mt-2 text-slate-600 flex-grow">
@@ -48,8 +47,8 @@ import rutinvarazsloImg from '../assets/rutinvarazslo-kepzes.jpg';
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-        <img src={rutinvarazsloImg.src} alt="Rutinvarázsló képzés" class="w-full h-56 object-cover" />
+      <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+        <Image src={rutinvarazsloImg} alt="Rutinvarázsló képzés" class="w-full h-56 object-cover" />
         <div class="p-6 flex-grow flex flex-col">
           <h3 class="text-xl font-bold text-slate-900">Rutinvarázsló</h3>
           <p class="mt-2 text-slate-600 flex-grow">

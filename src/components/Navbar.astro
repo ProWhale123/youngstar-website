@@ -1,21 +1,23 @@
 ---
 // src/components/Navbar.astro
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.jpg'; 
 import Container from './Container.astro';
 import Button from './Button.astro';
 ---
 
-<header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
+<header class="sticky top-0 left-0 w-full bg-white/90 backdrop-blur-lg z-50 shadow-sm">
   <Container>
     <div class="flex items-center justify-between h-20">
-      <a href="/" class="text-2xl font-bold text-slate-900">
-        Young<span class="text-sky-600">Star Academy</span>
+      <a href="/">
+        <Image src={logo} alt="YoungStar Academy Logo" class="h-15 w-auto" />
       </a>
 
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="/rolunk" class="text-slate-600 hover:text-sky-600 transition-colors">Iskolánk</a>
-        <a href="/kepzesek" class="text-slate-600 hover:text-sky-600 transition-colors">Képzéseink</a>
-        <a href="/erasmus" class="text-slate-600 hover:text-sky-600 transition-colors">Erasmus+</a>
-        <a href="/kapcsolat" class="text-slate-600 hover:text-sky-600 transition-colors">Kapcsolat</a>
+        <a href="#rolunk" class="text-slate-600 hover:text-sky-600 transition-colors">Rólunk</a>
+        <a href="#kepzesek" class="text-slate-600 hover:text-sky-600 transition-colors">Képzéseink</a>
+        <a href="#oktatoink" class="text-slate-600 hover:text-sky-600 transition-colors">Oktatóink</a>
+        <a href="#kapcsolat" class="text-slate-600 hover:text-sky-600 transition-colors">Kapcsolat</a>
       </nav>
 
       <div class="hidden md:block">
