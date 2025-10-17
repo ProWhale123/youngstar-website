@@ -6,7 +6,7 @@ import Container from './Container.astro';
 import Button from './Button.astro';
 ---
 
-<header class="sticky top-0 left-0 w-full bg-white/90 backdrop-blur-lg z-50 shadow-sm">
+<header class="sticky top-0 left-0 w-full bg-slate-900/80 backdrop-blur-lg z-50 shadow-md shadow-slate-900/50">
   <Container>
     <div class="flex items-center justify-between h-20">
       <a href="/">
@@ -14,17 +14,17 @@ import Button from './Button.astro';
       </a>
 
       <nav class="hidden md:flex items-center space-x-8">
-        <a href="#rolunk" class="text-slate-600 hover:text-sky-600 transition-colors">Rólunk</a>
-        <a href="#kepzesek" class="text-slate-600 hover:text-sky-600 transition-colors">Képzéseink</a>
-        <a href="#oktatoink" class="text-slate-600 hover:text-sky-600 transition-colors">Oktatóink</a>
-        <a href="#kapcsolat" class="text-slate-600 hover:text-sky-600 transition-colors">Kapcsolat</a>
+        <a href="#rolunk" class="text-slate-300 hover:text-white transition-colors">Rólunk</a>
+        <a href="#kepzesek" class="text-slate-300 hover:text-white transition-colors">Képzéseink</a>
+        <a href="#oktatoink" class="text-slate-300 hover:text-white transition-colors">Oktatóink</a>
+        <a href="#kapcsolat" class="text-slate-300 hover:text-white transition-colors">Kapcsolat</a>
       </nav>
 
       <div class="hidden md:block">
-        <Button href="/jelentkezes">Jelentkezés</Button>
+        <Button href="/jelentkezes" variant="primary">Jelentkezés</Button>
       </div>
 
-      <button class="md:hidden text-slate-800">
+      <button class="md:hidden text-slate-300">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </button>
     </div>

@@ -3,17 +3,18 @@
 interface Props {
   href: string;
   variant?: 'primary' | 'secondary';
+  className?: string;
 }
 
-const { href, variant = 'primary' } = Astro.props;
+const { href, variant = 'primary', className } = Astro.props;
 
 const styles = {
-  base: "inline-block px-6 py-3 rounded-lg text-center font-bold text-sm uppercase tracking-wider transition-transform duration-200 ease-in-out transform hover:-translate-y-0.5",
-  primary: "bg-orange-500 text-white shadow-lg hover:bg-orange-600",
+  base: "inline-block px-6 py-3 rounded-lg text-center font-bold text-sm uppercase tracking-wider transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg",
+  primary: "bg-teal-500 text-white hover:bg-teal-600 hover:shadow-xl",
   secondary: "bg-transparent text-sky-600 border-2 border-sky-600 hover:bg-sky-600 hover:text-white"
 }
 
-const buttonClass = `${styles.base} ${styles[variant]}`;
+const buttonClass = `${styles.base} ${styles[variant]} ${className}`;
 ---
 
 <a href={href} class={buttonClass}>

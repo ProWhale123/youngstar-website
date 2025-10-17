@@ -3,8 +3,6 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import Velemenyek from '../components/Velemenyek.astro';
-import CallToAction from '../components/CallToAction.astro';
 
 interface Props {
   title: string;
@@ -37,18 +35,13 @@ const { title } = Astro.props;
     </style>
   </head>
   
-  {/* EZ VÁLTOZOTT: A body kap egy sötét hátteret */}
-  <body class="bg-slate-800 text-slate-800 antialiased flex flex-col min-h-screen">
+  <body class="bg-slate-900 text-slate-300 antialiased flex flex-col min-h-screen">
     <Navbar />
 
-    {/* A fő tartalom egy fehér hátterű div-be kerül */}
-    <div class="flex-grow bg-white">
+    <main class="flex-grow">
       <slot />
-    </div>
-
-    {/* Ezek a komponensek a sötét háttéren jelennek meg */}
-    <Velemenyek />
-    <CallToAction />
+    </main>
+    
     <Footer />
   </body>
 </html>
