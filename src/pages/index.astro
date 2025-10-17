@@ -3,11 +3,17 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Hero from '../components/Hero.astro';
 import WhyUs from '../components/WhyUs.astro';
-import Courses from '../components/Courses.astro'; // <-- Új import
+import Courses from '../components/Courses.astro';
+import Oktatoink from '../components/Oktatoink.astro';     // <-- Új import
+import Velemenyek from '../components/Velemenyek.astro';   // <-- Új import
+import CallToAction from '../components/CallToAction.astro'; // <-- Új import
 ---
 
 <MainLayout title="Főoldal - Borbély és szépségszakmai képzések">
   <Hero />
-    <Courses /> {/* <-- Új komponens beillesztve */}
   <WhyUs />
+  <Courses />
+  <Oktatoink />
+  <Velemenyek />
+  <CallToAction />
 </MainLayout>

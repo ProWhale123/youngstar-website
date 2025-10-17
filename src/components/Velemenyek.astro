@@ -1,0 +1,31 @@
+---
+// src/components/Velemenyek.astro
+import Container from './Container.astro';
+---
+<section class="py-20 sm:py-24 bg-slate-800">
+  <Container>
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+        Mit mondanak a nálunk végzett diákok?
+      </h2>
+      
+      <div class="mt-12 flow-root">
+        <div class="relative">
+          {/* Idézőjel ikon */}
+          <svg viewBox="0 0 12 12" class="absolute left-1/2 top-0 -ml-4 h-12 w-12 -translate-y-1/2 text-slate-600">
+            <path d="M2 11.5c-1.1 0-2-.9-2-2V4.5c0-1.1.9-2 2-2h3c.6 0 1 .4 1 1v3c0 .6-.4 1-1 1H3v.5c0 .3.2.5.5.5h1c.6 0 1 .4 1 1v1c0 .6-.4 1-1 1H2.5A.5.5 0 0 1 2 11.5ZM8 11.5c-1.1 0-2-.9-2-2V4.5c0-1.1.9-2 2-2h3c.6 0 1 .4 1 1v3c0 .6-.4 1-1 1H9v.5c0 .3.2.5.5.5h1c.6 0 1 .4 1 1v1c0 .6-.4 1-1 1H8.5A.5.5 0 0 1 8 11.5Z"/>
+          </svg>
+          <blockquote class="text-xl italic leading-9 text-slate-300">
+            <p>
+              "Soha nem gondoltam, hogy ennyi idősen karriert válthatok, de a YoungStar Academy mellettünk állt az első pillanattól kezdve. A képzés gyakorlatias volt, az oktatók pedig profik és segítőkészek. Ma már a saját szalonomat vezetem!"
+            </p>
+          </blockquote>
+          <footer class="mt-8">
+            <div class="text-base font-semibold text-white">Kovács Judit</div>
+            <div class="text-sm text-sky-400">Sikeresen végzett borbély</div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

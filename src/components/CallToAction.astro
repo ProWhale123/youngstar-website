@@ -1,0 +1,25 @@
+---
+// src/components/CallToAction.astro
+import Container from './Container.astro';
+import Button from './Button.astro';
+---
+<section class="bg-white">
+  <Container>
+    <div class="relative -mx-4 sm:-mx-6 px-4 sm:px-10 py-16 overflow-hidden rounded-2xl bg-slate-800">
+      <div class="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[46rem] -translate-x-1/2 rotate-[160deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20"></div>
+      </div>
+      <div class="text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Készen állsz, hogy megvalósítsd az álmaidat?
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
+          Válassz képzéseink közül, vagy vedd fel velünk a kapcsolatot, ha kérdésed van. Segítünk elindulni!
+        </p>
+        <div class="mt-8">
+          <Button href="/kepzesek" variant="primary">Képzéseink megtekintése</Button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

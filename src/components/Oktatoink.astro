@@ -1,0 +1,60 @@
+---
+// src/components/Oktatoink.astro
+import Container from './Container.astro';
+import oktato1 from '../assets/oktato-1.jpg'; // Cseréld le a valós fájlnevekre!
+import oktato2 from '../assets/oktato-2.jpg';
+import oktato3 from '../assets/oktato-3.jpg'; // Hozzáadhatsz/törölhetsz oktatókat
+---
+
+<section class="py-20 sm:py-24 bg-white">
+  <Container>
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+        Ismerd meg mester oktatóinkat!
+      </h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Több évtizedes tapasztalattal rendelkező, elismert szakemberektől tanulhatsz, akik a legújabb trendeket is naprakészen ismerik.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
+      <div class="text-center">
+        <div class="relative w-48 h-48 mx-auto">
+          <img src={oktato1.src} alt="Oktató neve" class="rounded-full object-cover w-full h-full shadow-lg" />
+          {/* Opcionális díszítő elem */}
+          <div class="absolute -top-2 -right-2 w-12 h-12 bg-sky-200 rounded-full -z-10"></div>
+        </div>
+        <h3 class="mt-6 text-xl font-bold text-slate-900">Oktató Neve</h3>
+        <p class="text-sky-600 font-semibold">Borbély Mesteroktató</p>
+        <p class="mt-2 text-sm text-slate-500">
+          "A célom, hogy ne csak egy szakmát, hanem egy szenvedélyt adjak át a diákjaimnak."
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="relative w-48 h-48 mx-auto">
+          <img src={oktato2.src} alt="Paranovyné Egri Zsanett" class="rounded-full object-cover w-full h-full shadow-lg" />
+          <div class="absolute -bottom-2 -left-2 w-12 h-12 bg-orange-200 rounded-full -z-10"></div>
+        </div>
+        <h3 class="mt-6 text-xl font-bold text-slate-900">Paranovyné Egri Zsanett</h3>
+        <p class="text-sky-600 font-semibold">Manikűr Mesterleveles Oktató</p>
+        <p class="mt-2 text-sm text-slate-500">
+          "A precizitás és a kreativitás kéz a kézben járnak. Erre tanítom a jövő szakembereit."
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="relative w-48 h-48 mx-auto">
+          <img src={oktato3.src} alt="Oktató neve" class="rounded-full object-cover w-full h-full shadow-lg" />
+          <div class="absolute -top-2 -left-2 w-12 h-12 bg-pink-200 rounded-full -z-10"></div>
+        </div>
+        <h3 class="mt-6 text-xl font-bold text-slate-900">Harmadik Oktató</h3>
+        <p class="text-sky-600 font-semibold">Szépségtanácsadó</p>
+        <p class="mt-2 text-sm text-slate-500">
+          "A szépség belülről fakad, de a magabiztosságot a tudás adja. Én ebben segítek."
+        </p>
+      </div>
+
+    </div>
+  </Container>
+</section>
